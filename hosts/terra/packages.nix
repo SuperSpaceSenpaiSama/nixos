@@ -37,6 +37,7 @@ with pkgs;
   # Games
   iw4x-launcher
   starsector
+  inputs.nix-gaming.packages.${stdenv.hostPlatform.system}.faf-client
 
   # CLI Games
   _2048-in-terminal
