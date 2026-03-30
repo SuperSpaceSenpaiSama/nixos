@@ -66,6 +66,7 @@
         copyEmojiMarkdown.enable = true; # copies unicode character instead of discord name for emojis
         copyFileContents.enable = true; # adds button to copy text file contents
         CopyUserURLs.enable = true; # adds context option to copy URL to user
+        customCommands.enable = true; # create and use custom slash commands / tags
         CustomRPC = {
           enable = false; # TODO
         };
@@ -109,7 +110,6 @@
         };
         messageLinkEmbeds.enable = true; # adds preview to messages linking to another message
         messageLogger.enable = true; # temporarily logs deleted and edited messages
-        messageTags.enable = true; # allows saving messages and using them with a command
         # MutualGroupDMs.enable = true; # shows mutual group DMs on profile
         newGuildSettings = {
           enable = true; # applies notification settings on new server joins
