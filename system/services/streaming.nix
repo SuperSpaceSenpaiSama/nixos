@@ -19,9 +19,10 @@
     "lidarr/password" = { };
     "prowlarr/api_key" = { };
     "prowlarr/password" = { };
+    "jellyfin/api_key" = { };
     "jellyfin/chris_password" = { };
     "jellyfin/brooklyn_password" = { };
-    "jellyseerr/api_key" = { };
+    "seerr/api_key" = { };
     "qbittorrent/username" = { };
     "qbittorrent/password" = { };
     "mullvad-account-number" = { };
@@ -42,7 +43,7 @@
     };
 
     nginx = {
-      enable = true;
+      enable = false;
       addHostsEntries = true; # Disable this is you have your own DNS configuration
       domain = "nixflix";
     };
@@ -112,9 +113,9 @@
           _secret = config.sops.secrets."prowlarr/password".path;
         };
         indexers = [
-          {
-            name = "EZTV";
-          }
+          # {
+          #   name = "EZTV";
+          # }
           {
             name = "LimeTorrents";
           }
@@ -125,16 +126,10 @@
             name = "RuTor";
           }
           {
-            name = "Torrent Downloads";
-          }
-          {
             name = "Uindex";
           }
           {
             name = "UzTracker";
-          }
-          {
-            name = "World-torrent";
           }
           {
             name = "YTS";
@@ -149,7 +144,11 @@
     jellyfin = {
       enable = true;
       subdomain = "watch";
+      openFirewall = true;
       network.enableRemoteAccess = false;
+      apiKey = {
+        _secret = config.sops.secrets."jellyfin/api_key".path;
+      };
       users = {
         chris = {
           mutable = false;
@@ -168,18 +167,18 @@
       };
     };
 
-    jellyseerr = {
+    seerr = {
       enable = true;
       subdomain = "request";
       apiKey = {
-        _secret = config.sops.secrets."jellyseerr/api_key".path;
+        _secret = config.sops.secrets."seerr/api_key".path;
       };
     };
 
     mullvad = {
       enable = true;
       gui.enable = true;
-      autoConnect = true;
+      autoConnect = false;
       accountNumber = {
         _secret = config.sops.secrets.mullvad-account-number.path;
       };
@@ -228,11 +227,18 @@
         BitTorrent = {
           Session = {
             AddTorrentStopped = false;
-            Interface = "wg0-mullvad";
-            InterfaceName = "wg0-mullvad";
-            Port = 45500;
+            Interface = "newyork";
+            InterfaceName = "newyork";
+            Port = 10786;
             QueueingSystemEnabled = true;
             SSL.Port = 32380;
+
+            # Relocation of torrents based on category
+            DisableAutoTMMByDefault = false; # False = enable automatic torrent management
+            DisableAutoTMMTriggers = {
+              CategorySavePathChanged = false; # False = enable moving torrent when category path changes
+              DefaultSavePathChanged = false; # False = enable moving torrent when default path changes
+            };
           };
         };
         Preferences = {
