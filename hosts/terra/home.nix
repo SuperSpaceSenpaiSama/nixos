@@ -86,6 +86,8 @@ in
   #   # };
   # };
 
+  gtk.gtk4.theme = config.gtk.theme;
+
   # qt = {
   #   enable = true;
   #   # platformTheme.name = lib.mkForce "Adwaita-dark";
