@@ -6,7 +6,8 @@
 
 # Much nicer method
 #   Returns pid and passes to `kill`
-pgrep -f noctalia-shell | xargs kill
+# pgrep -f noctalia-shell | xargs kill
+pgrep -f .quickshell | xargs kill
 
 # Start noctalia-shell in background
 #   Redirects stdout to /dev/null, and stderr to stdout
