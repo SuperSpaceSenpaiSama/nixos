@@ -7,6 +7,7 @@
 
 let
   jackify = pkgs.callPackage "${self}/pkgs/jackify.nix" { };
+  iloader = pkgs.callPackage "${self}/pkgs/iloader.nix" { };
   helium = pkgs.callPackage "${self}/pkgs/helium.nix" { };
 in
 with pkgs;
@@ -38,6 +39,7 @@ with pkgs;
   iw4x-launcher
   starsector
   inputs.nix-gaming.packages.${stdenv.hostPlatform.system}.faf-client
+  beyond-all-reason
 
   # CLI Games
   _2048-in-terminal
@@ -67,6 +69,7 @@ with pkgs;
   nixfmt
   nixpkgs-fmt
   black
+  iloader # tool to sideload .ipa  on apple devices
 
   # Utilities
   neovim
