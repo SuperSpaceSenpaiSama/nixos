@@ -37,7 +37,6 @@
     swww # Animated wallpaper daemon
     swaybg # Wallpaper tool
     gnome-themes-extra
-    nodePackages.prettier
     xwayland
     #    alvr
     ffmpeg
