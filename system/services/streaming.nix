@@ -120,6 +120,9 @@
             name = "LimeTorrents";
           }
           {
+            name = "Nyaa.si";
+          }
+          {
             name = "The Pirate Bay";
           }
           {
