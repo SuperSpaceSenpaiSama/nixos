@@ -6,25 +6,10 @@
   programs.niri.settings = {
     layer-rules = [
       {
+        # Set the overview wallpaper on the backdrop
         matches = [
           {
-            namespace = "^quickshell-wallpaper$";
-          }
-        ];
-        #place-within-backdrop = true;
-      }
-      {
-        matches = [
-          {
-            namespace = "^quickshell-overview$";
-          }
-        ];
-        place-within-backdrop = true;
-      }
-      {
-        matches = [
-          {
-            namespace = "^swww-daemon$";
+            namespace = "^noctalia-wallpaper*";
           }
         ];
         place-within-backdrop = true;
@@ -66,6 +51,14 @@
           { title = "Cider"; }
         ];
         open-on-workspace = "music";
+      }
+
+      # MCSR
+      {
+        matches = [
+          { app-id = "waywall"; }
+        ];
+        open-maximized = true;
       }
 
       {

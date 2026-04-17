@@ -15,7 +15,5 @@
     { command = [ "arrpc" ]; }
     { command = [ "xwayland-satellite" ]; }
     { command = [ "noctalia-shell" ]; }
-    # { command = [ "vesktop" ]; }
-    { command = [ "swww-daemon" ]; }
   ];
 }
