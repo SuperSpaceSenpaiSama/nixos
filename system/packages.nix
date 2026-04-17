@@ -34,7 +34,7 @@
     #    networkmanagerapplet # Waybar networking control
     waypaper
     arrpc # Discord RPC server
-    swww # Animated wallpaper daemon
+    awww # Animated wallpaper daemon
     swaybg # Wallpaper tool
     gnome-themes-extra
     xwayland
@@ -58,6 +58,8 @@
     ddcutil
     localsend # AirDrop alternative
     inputs.nixmate.packages.${stdenv.hostPlatform.system}.default # NixOS TUI helper
+    inputs.hyprpolkitagent.packages.${stdenv.hostPlatform.system}.default
+    libXtst
 
     # Connect to iPhone over USB
     usbmuxd
