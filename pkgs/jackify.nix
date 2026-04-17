@@ -5,7 +5,7 @@
 }:
 
 let
-  version = "0.1.7.1";
+  version = "0.5.0.4";
   pname = "Jackify";
   id = "com.jackify.app";
 
