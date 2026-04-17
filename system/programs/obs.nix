@@ -9,10 +9,16 @@
     enableVirtualCamera = true;
     plugins = with pkgs.obs-studio-plugins; [
       droidcam-obs
-      obs-vkcapture
-      obs-vaapi
       obs-composite-blur
-      #        obs-webkitgtk
+      wlrobs
+      obs-backgroundremoval
+      obs-pipewire-audio-capture
+      obs-vaapi
+      obs-gstreamer
+
+      # Must start games with `obs-gamecapture %command%`
+      # See https://github.com/nowrep/obs-vkcapture
+      obs-vkcapture
     ];
   };
 
