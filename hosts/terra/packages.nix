@@ -6,6 +6,7 @@
 }:
 
 let
+  amethyst = pkgs.callPackage "${self}/pkgs/amethyst.nix" { };
   jackify = pkgs.callPackage "${self}/pkgs/jackify.nix" { };
   iloader = pkgs.callPackage "${self}/pkgs/iloader.nix" { };
   helium = pkgs.callPackage "${self}/pkgs/helium.nix" { };
@@ -16,7 +17,7 @@ with pkgs;
   protonplus
   lutris
   heroic
-  prismlauncher
+  # prismlauncher
   nautilus
   file-roller
   termius
@@ -32,6 +33,7 @@ with pkgs;
   mono
   sc-controller
   jackify # Linux Wabbajack modding client
+  amethyst # Linux modding client
   helium # Chromium-based browser
   minion # ESO modding tool
 
