@@ -16,10 +16,12 @@
     "${self}/system/greeter/greetd.nix"
     "${self}/system/programs/1password.nix"
     "${self}/system/programs/lact.nix"
+    "${self}/system/programs/minecraft.nix"
     "${self}/system/programs/nix-ld.nix"
     "${self}/system/programs/obs.nix"
     "${self}/system/programs/steam.nix"
     "${self}/system/programs/stylix.nix"
+    "${self}/system/programs/thunar.nix"
     "${self}/system/services/flatpak.nix"
     # "${self}/system/services/invidious.nix"
     "${self}/system/services/keyring.nix"
@@ -34,7 +36,15 @@
     "${self}/system/environment.nix"
     "${self}/system/packages.nix"
     inputs.home-manager.nixosModules.default
+
+    inputs.hjem.nixosModules.default
+    (lib.mkAliasOptionModule [ "hj" ] [ "hjem" "users" "chris" "files" ])
   ];
+
+  hjem = {
+    linker = inputs.hjem.packages.${pkgs.stdenv.hostPlatform.system}.smfh;
+    clobberByDefault = true;
+  };
 
   nixpkgs.overlays = [
     (final: prev: {

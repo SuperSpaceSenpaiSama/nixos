@@ -19,9 +19,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hjem = {
+      url = "github:feel-co/hjem";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     matugen.url = "github:InioX/matugen";
 
     niri.url = "github:sodiboo/niri-flake";
+
+    mcsr-nixos = {
+      url = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     stylix = {
       url = "github:danth/stylix";
