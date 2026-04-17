@@ -17,9 +17,9 @@
           wget
           pkgsi686Linux.libpulseaudio
           pkgsi686Linux.freetype
-          pkgsi686Linux.xorg.libXcursor
-          pkgsi686Linux.xorg.libXcomposite
-          pkgsi686Linux.xorg.libXi
+          pkgsi686Linux.libXcursor
+          pkgsi686Linux.libXcomposite
+          pkgsi686Linux.libXi
         ];
       };
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
