@@ -40,7 +40,7 @@ with pkgs;
   # Games
   iw4x-launcher
   starsector
-  inputs.nix-gaming.packages.${stdenv.hostPlatform.system}.faf-client
+  # inputs.nix-gaming.packages.${stdenv.hostPlatform.system}.faf-client
   beyond-all-reason
 
   # CLI Games
@@ -95,6 +95,8 @@ with pkgs;
   lolcat # make terminal commands pretty
   cmatrix # fun matrix effect
   dysk # Better disk space analyzer
+  solaar # control hardware devices
+  evhz # measure mouse polling rates
 
   # Charm apps (https://charm.land/apps)
   vhs # turn commands into gifs
