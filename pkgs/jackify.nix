@@ -11,7 +11,7 @@ let
 
   src = fetchurl {
     url = "https://github.com/Omni-guides/Jackify/releases/download/v${version}/${pname}.AppImage";
-    hash = "sha256:1cca37226fb96790ab14078d1aacd4b7e264addd9cd22ec19d386a927610e2f5";
+    hash = "sha256-IQtWDX3njHqJhJzBFc7DmWJy9Du+F7RadN74SAl6X/U=";
   };
 
   appimageContents = appimageTools.extract { inherit pname version src; };
