@@ -6,10 +6,6 @@
 {
   services.arrpc.enable = true;
 
-  home.packages = with pkgs; [
-    discord-ptb # Used for completing Discord quests
-  ];
-
   programs.nixcord = {
     enable = true;
     # discord.enable = false;
@@ -18,7 +14,7 @@
     # discord.equicord.package = pkgs.callPackage "${self}/pkgs/equicord.nix" { };
 
     equibop = {
-      enable = true;
+      enable = false;
       useSystemEquicord = false;
     };
 
