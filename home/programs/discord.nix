@@ -14,7 +14,7 @@
     # discord.equicord.package = pkgs.callPackage "${self}/pkgs/equicord.nix" { };
 
     equibop = {
-      enable = false;
+      enable = true;
       useSystemEquicord = false;
     };
 
