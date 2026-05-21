@@ -1,5 +1,4 @@
 {
-  pkgs,
   ...
 }:
 
@@ -38,7 +37,6 @@
         anonymiseFileNames.enable = true; # makes uploading file names randomized
         betterGifAltText.enable = true; # shows gif tags / filename in alt text
         betterGifPicker.enable = true; # gif picker opens to favorites menu
-        betterNotesBox.enable = true; # hide notes OR disable spellcheck in notes
         betterRoleContext.enable = true; # adds right click menu on roles on user's profile
         # betterRoleDot.enable = true; # allows usage of colored names and role dot next to name
         betterSessions.enable = true; # gives timestamps, notifications, and custom names about discord sessions
@@ -147,10 +145,10 @@
         shikiCodeblocks = {
           enable = true; # enables vscode-style codeblocks
           # Themes for code blocks
-          theme = "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/2d87559c7601a928b9f7e0f0dda243d2fb6d4499/packages/tm-themes/themes/catppuccin-mocha.json";
-          # theme = "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/2d87559c7601a928b9f7e0f0dda243d2fb6d4499/packages/tm-themes/themes/catppuccin-macchiato.json";
-          # theme = "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/2d87559c7601a928b9f7e0f0dda243d2fb6d4499/packages/tm-themes/themes/catppuccin-frappe.json";
-          # theme = "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/2d87559c7601a928b9f7e0f0dda243d2fb6d4499/packages/tm-themes/themes/catppuccin-latte.json";
+          theme = "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/catppuccin-mocha.json";
+          # theme = "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/catppuccin-macchiato.json";
+          # theme = "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/catppuccin-frappe.json";
+          # theme = "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/catppuccin-latte.json";
           useDevIcon = "COLOR"; # sets language icon to be colored or not, options "DISABLED" "GREYSCALE" "COLOR"
         };
         showAllMessageButtons.enable = true; # show all message actions if holding shift or not
