@@ -5,9 +5,8 @@
 }:
 
 {
-  programs.vscode = {
+  programs.vscodium = {
     enable = true;
-    package = pkgs.vscodium;
     mutableExtensionsDir = true;
 
     # Wrapped all the previous top-level options in profiles.default
