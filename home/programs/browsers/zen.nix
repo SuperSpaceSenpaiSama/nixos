@@ -51,6 +51,11 @@
 
   programs.zen-browser = {
     enable = true;
+    setAsDefaultBrowser = true;
+
+    nativeMessagingHosts = [
+      pkgs.firefoxpwa
+    ];
 
     policies =
       let
@@ -87,13 +92,13 @@
         ExtensionSettings = mkExtensionSettings {
           "uBlock0@raymondhill.net" = "ublock-origin";
           "addon@darkreader.org" = "darkreader";
-          # "78272b6fa58f4a1abaac99321d503a20@proton.me" = "proton-pass";
+          "78272b6fa58f4a1abaac99321d503a20@proton.me" = "proton-pass";
           "sponsorBlocker@ajay.app" = "sponsorblock";
           "{d634138d-c276-4fc8-924b-40a0ea21d284}" = "1password-x-password-manager";
           # "{446900e4-71c2-419f-a6a7-df9c091e268b}" = "bitwarden";
           "search@kagi.com" = "kagi-search";
           "{bd6be57d-91d7-41d2-b61d-3ba20f7942e5}" = "kagi-translate";
-          # "privacypass@kagi.com" = "kagi-privacy-pass";
+          "privacypass@kagi.com" = "kagi-privacy-pass";
         };
         Preferences = mkLockedAttrs {
           "browser.tabs.warnOnClose" = false;
@@ -188,7 +193,7 @@
         spacesForce = true;
         spaces = {
           "General" = {
-            id = "c6de089c-410d-4206-961d-ab11f988d40a";
+            id = "c6de089c-410d-4206-961d-ab11f988d40b";
             icon = "🌱";
             position = 1000;
             # theme = {
@@ -207,13 +212,13 @@
             # };
           };
           "Shopping" = {
-            id = "78aabdad-8aae-4fe0-8ff0-2a0c6c4ccc24";
+            id = "78aabdad-8aae-4fe0-8ff0-2a0c6c4ccc25";
             icon = "💸";
             container = containers."Shopping".id;
             position = 2000;
           };
           "Work" = {
-            id = "cdd10fab-4fc5-494b-9041-325e5759195b";
+            id = "cdd10fab-4fc5-494b-9041-325e5759195c";
             icon = "👔";
             container = containers."Work".id;
             position = 3000;
