@@ -25,7 +25,6 @@
     "seerr/api_key" = { };
     "qbittorrent/username" = { };
     "qbittorrent/password" = { };
-    "mullvad-account-number" = { };
   };
 
   users.groups.media = { };
@@ -125,27 +124,12 @@
           {
             name = "The Pirate Bay";
           }
-          {
-            name = "RuTor";
-          }
-          {
-            name = "Uindex";
-          }
-          {
-            name = "UzTracker";
-          }
-          {
-            name = "YTS";
-          }
-          {
-            name = "ZkTorrent";
-          }
         ];
       };
     };
 
     jellyfin = {
-      enable = true;
+      enable = false;
       subdomain = "watch";
       openFirewall = true;
       network.enableRemoteAccess = false;
@@ -171,34 +155,17 @@
     };
 
     seerr = {
-      enable = true;
+      enable = false;
       subdomain = "request";
       apiKey = {
         _secret = config.sops.secrets."seerr/api_key".path;
       };
     };
 
-    mullvad = {
-      enable = true;
-      gui.enable = true;
-      autoConnect = false;
-      accountNumber = {
-        _secret = config.sops.secrets.mullvad-account-number.path;
-      };
-      location = [
-        "us"
-        "nyc"
-      ];
-      dns = [
-        "194.242.2.4" # Mullvad base
-        "9.9.9.9" # Quad9
-        "94.140.14.14" # Adguard
-        "1.1.1.1" # Cloudflare
-      ];
-      killSwitch = {
-        enable = false;
-        allowLan = true;
-      };
+    vpn = {
+      enable = false;
+      # wgConfFile = config.sops.secrets."wireguard/conf".path;
+      accessibleFrom = [ "192.168.1.0/24" ];
     };
 
     recyclarr = {
@@ -230,9 +197,9 @@
         BitTorrent = {
           Session = {
             AddTorrentStopped = false;
-            Interface = "newyork";
-            InterfaceName = "newyork";
-            Port = 10786;
+            Interface = "proton0";
+            InterfaceName = "proton0";
+            Port = 58198;
             QueueingSystemEnabled = true;
             SSL.Port = 32380;
 
@@ -284,5 +251,8 @@
     picard # MusicBrainz tagger
     qbittorrent # Torrent downloader
     yt-dlp # YouTube downloader
+
+    proton-vpn
+    proton-vpn-cli
   ];
 }
