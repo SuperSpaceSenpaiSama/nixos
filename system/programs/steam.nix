@@ -31,7 +31,7 @@
 
   programs.gamescope = {
     enable = true;
-    capSysNice = true;
+    capSysNice = false;
     args = [
       "--rt"
       "--expose-wayland"
@@ -59,6 +59,10 @@
     freetype
     fontconfig
     zenity
+
+    # Elite Dangerous
+    min-ed-launcher # launcher
+    edhm-ui # ui mod
   ];
 
   # To connect controller (and reconnect automatically)
@@ -71,6 +75,10 @@
   # 7. `trust <Controller MAC>`
   # 8. `connect <Controller MAC>`
   services.udev.extraRules = ''
+    # 8BitDo Ultimate 2 Wireless; 2.4GHz/Dongle; Bluetooth
+    KERNEL=="hidraw*", ATTRS{idProduct}=="6012", ATTRS{idVendor}=="2dc8", MODE="0660", TAG+="uaccess"
+    KERNEL=="hidraw*", KERNELS=="*2DC8:6012*", MODE="0660", TAG+="uaccess"
+
     # Sony PlayStation DualShock 4; Bluetooth; USB
     ACTION!="remove", KERNEL=="hidraw*", KERNELS=="*054C:05C4*", MODE="0660", TAG+="uaccess"
     ACTION!="remove", KERNEL=="hidraw*", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="05c4", MODE="0660", TAG+="uaccess"
