@@ -192,7 +192,7 @@
 
     equibopConfig = {
       plugins = {
-        anammox.enable = true; # hides various nitro / store features
+        declutter.enable = true; # hides various nitro / store features
         equicordToolbox.enable = true; # adds button at top right that houses equicord quick actions
         # invisibleChat.enable = true; # encrypt messages in non-suspicious way
         questify = {
@@ -205,13 +205,13 @@
         moreCommands.enable = true; # adds many fun commands
         # moreKaomoji.enable = true; # adds more Kaomojis (table flip style, etc.)
         moreUserTags.enable = true; # adds tags labeling apps, webhooks, mods, admins, etc.
-        youtubeDescription.enable = true; # adds description to embedded youtube videos
+        fixYoutubeEmbeds.enable = true; # adds description to embedded youtube videos
       };
     };
 
     equicordConfig = {
       plugins = {
-        anammox.enable = true; # hides various nitro / store features
+        declutter.enable = true; # hides various nitro / store features
         equicordToolbox.enable = true; # adds button at top right that houses equicord quick actions
         # invisibleChat.enable = true; # encrypt messages in non-suspicious way
         questify = {
@@ -224,7 +224,7 @@
         moreCommands.enable = true; # adds many fun commands
         # moreKaomoji.enable = true; # adds more Kaomojis (table flip style, etc.)
         moreUserTags.enable = true; # adds tags labeling apps, webhooks, mods, admins, etc.
-        youtubeDescription.enable = true; # adds description to embedded youtube videos
+        fixYoutubeEmbeds.enable = true; # adds description to embedded youtube videos
       };
     };
 
