@@ -91,7 +91,6 @@ with pkgs;
   gpu-screen-recorder
   mpv
   cava
-  zoxide # better `cd`
   lolcat # make terminal commands pretty
   cmatrix # fun matrix effect
   dysk # Better disk space analyzer
