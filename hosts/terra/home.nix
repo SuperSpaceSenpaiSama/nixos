@@ -28,13 +28,15 @@ in
     "${self}/home/programs/gamedev/godot.nix"
     "${self}/home/programs/gamedev/unity.nix"
     # "${self}/home/programs/games/bakkesmod.nix"
+    "${self}/home/programs/terminal/alacritty.nix"
+    "${self}/home/programs/terminal/ghostty.nix"
     "${self}/home/programs/terminal/nushell.nix"
     "${self}/home/programs/terminal/zoxide.nix"
+
     "${self}/home/programs/chat.nix"
     "${self}/home/programs/discord.nix"
     "${self}/home/programs/email.nix"
     "${self}/home/programs/fastfetch.nix"
-    "${self}/home/programs/ghostty.nix"
     "${self}/home/programs/mangohud.nix"
     "${self}/home/programs/xremap.nix"
 
