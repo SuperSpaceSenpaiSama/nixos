@@ -15,7 +15,7 @@
     settings = {
       bar = {
         density = "compact";
-        position = "top";
+        position = "left";
         barType = "floating";
         showCapsule = true;
         widgets = {
@@ -63,7 +63,7 @@
             }
             {
               id = "ControlCenter";
-              useDistroLogo = true;
+              useDistroLogo = false;
               icon = "noctalia"; # used when distro logo is set to false
               enableColorization = true;
             }
@@ -79,8 +79,8 @@
 
       location = {
         analogClockInCalendar = "true";
-        name = "Indianapolis, US";
-        useFahrenheit = true;
+        name = "Salt Lake City";
+        useFahrenheit = false;
       };
 
       network = {

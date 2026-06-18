@@ -8,7 +8,7 @@
   # Needed for browser extensions to connect to desktop
   programs._1password-gui = {
     enable = true;
-    polkitPolicyOwners = [ "chris" ];
+    polkitPolicyOwners = [ "mothra" ];
   };
 
   environment.etc = {

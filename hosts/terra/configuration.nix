@@ -10,35 +10,35 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./disk-config.nix
+    #./disk-config.nix
     # ./disk-games.nix
     # ./disk-data.nix
     "${self}/system/greeter/greetd.nix"
-    "${self}/system/programs/1password.nix"
-    "${self}/system/programs/lact.nix"
-    "${self}/system/programs/minecraft.nix"
+    #"${self}/system/programs/1password.nix"
+    #"${self}/system/programs/lact.nix"
+    #"${self}/system/programs/minecraft.nix"
     "${self}/system/programs/nix-ld.nix"
     "${self}/system/programs/obs.nix"
-    "${self}/system/programs/steam.nix"
+    #"${self}/system/programs/steam.nix"
     "${self}/system/programs/stylix.nix"
     "${self}/system/programs/thunar.nix"
     "${self}/system/services/flatpak.nix"
     # "${self}/system/services/invidious.nix"
     "${self}/system/services/keyring.nix"
-    "${self}/system/services/searx.nix"
-    "${self}/system/services/streaming.nix"
+    #"${self}/system/services/searx.nix"
+    #"${self}/system/services/streaming.nix"
     "${self}/system/services/disable-usb-wakeup.nix"
     "${self}/system/services/virtualization.nix"
     "${self}/system/services/sops.nix"
     "${self}/system/services/ssh.nix"
-    "${self}/system/services/minecraft.nix"
+    #"${self}/system/services/minecraft.nix"
     "${self}/system/xdg.nix"
     "${self}/system/environment.nix"
     "${self}/system/packages.nix"
     inputs.home-manager.nixosModules.default
 
     inputs.hjem.nixosModules.default
-    (lib.mkAliasOptionModule [ "hj" ] [ "hjem" "users" "chris" "files" ])
+    (lib.mkAliasOptionModule [ "hj" ] [ "hjem" "users" "mothra" "files" ])
   ];
 
   hjem = {
@@ -61,9 +61,9 @@
 
   users.groups.i2c = { };
 
-  users.users.chris = {
+  users.users.mothra = {
     isNormalUser = true;
-    description = "chris";
+    description = "mothra";
     shell = pkgs.nushell;
     extraGroups = [
       "networkmanager"
@@ -81,7 +81,7 @@
     useUserPackages = true;
     extraSpecialArgs = { inherit self inputs; };
     users = {
-      "chris" = import ./home.nix;
+      "mothra" = import ./home.nix;
     };
   };
 
@@ -102,12 +102,12 @@
   # Creates and owns directories for mounted drives
   # systemd.tmpfiles.rules = [
   #   "d /games 0755 root root -"
-  #   "Z /games - chris users -"
+  #   "Z /games - mothra users -"
 
   #   "d /data 0755 root root -"
-  #   "Z /data - chris users -"
+  #   "Z /data - mothra users -"
 
-  #   "d /data/media 0775 chris media -"
+  #   "d /data/media 0775 mothra media -"
   #   "z /data/media - - -"
   # ];
 
@@ -182,14 +182,14 @@
     ];
     auto-optimise-store = true;
 
-    substituters = [
-      "https://nix-citizen.cachix.org"
+    #substituters = [
+      #"https://nix-citizen.cachix.org"
       #      "https://nix-gaming.cachix.org"
-    ];
-    trusted-public-keys = [
-      "nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="
+    #];
+#    trusted-public-keys = [
+#      "nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="
       #      "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
-    ];
+#    ];
   };
 
   nix.gc = {

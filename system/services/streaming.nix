@@ -20,7 +20,7 @@
     "prowlarr/api_key" = { };
     "prowlarr/password" = { };
     "jellyfin/api_key" = { };
-    "jellyfin/chris_password" = { };
+    "jellyfin/mothra_password" = { };
     "jellyfin/brooklyn_password" = { };
     "seerr/api_key" = { };
     "qbittorrent/username" = { };
@@ -28,13 +28,13 @@
   };
 
   users.groups.media = { };
-  users.users.chris.extraGroups = [ "media" ];
+  users.users.mothra.extraGroups = [ "media" ];
 
   nixflix = {
     enable = true;
     mediaDir = "/data/media";
     stateDir = "/data/.state";
-    mediaUsers = [ "chris" ];
+    mediaUsers = [ "mothra" ];
 
     theme = {
       enable = true;
@@ -137,11 +137,11 @@
         _secret = config.sops.secrets."jellyfin/api_key".path;
       };
       users = {
-        chris = {
+        mothra = {
           mutable = false;
           policy.isAdministrator = true;
           password = {
-            _secret = config.sops.secrets."jellyfin/chris_password".path;
+            _secret = config.sops.secrets."jellyfin/mothra_password".path;
           };
         };
         brooklyn = {

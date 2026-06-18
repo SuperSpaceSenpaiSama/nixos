@@ -11,7 +11,7 @@
         #user = "greeter";
         # Starts niri session logged in automatically without prompt
         command = "niri-session";
-        user = "chris";
+        user = "mothra";
       };
     };
   };

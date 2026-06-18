@@ -10,7 +10,7 @@
         source = "~/nixos/assets/icons/nix-lavender.png";
         padding = {
           top = 2;
-          left = 3;
+          left = 3;	  
         };
         width = 40;
       };

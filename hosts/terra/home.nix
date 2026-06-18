@@ -13,8 +13,8 @@ let
   cursorSize = 24;
 in
 {
-  home.username = "chris";
-  home.homeDirectory = "/home/chris";
+  home.username = "mothra";
+  home.homeDirectory = "/home/mothra";
 
   # Create .face file for application profile pictures
   home.file.".face".source = "${self}/assets/profile.jpg";
@@ -26,14 +26,14 @@ in
     "${self}/home/programs/editors"
 
     "${self}/home/programs/gamedev/godot.nix"
-    "${self}/home/programs/gamedev/unity.nix"
+    # "${self}/home/programs/gamedev/unity.nix"
     # "${self}/home/programs/games/bakkesmod.nix"
-    "${self}/home/programs/terminal/alacritty.nix"
+    # "${self}/home/programs/terminal/alacritty.nix"
     "${self}/home/programs/terminal/ghostty.nix"
     "${self}/home/programs/terminal/nushell.nix"
     "${self}/home/programs/terminal/zoxide.nix"
 
-    "${self}/home/programs/chat.nix"
+    # "${self}/home/programs/chat.nix"
     "${self}/home/programs/discord.nix"
     "${self}/home/programs/email.nix"
     "${self}/home/programs/fastfetch.nix"

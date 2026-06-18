@@ -13,7 +13,7 @@
     };
   };
 
-  users.users.chris.extraGroups = [
+  users.users.mothra.extraGroups = [
     "podman"
   ];
 

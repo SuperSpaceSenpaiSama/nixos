@@ -60,8 +60,8 @@ in
     "Mod+F".action = fullscreen-window;
     "Mod+T".action = toggle-window-floating;
 
-    "Control+Shift+1".action.screenshot = [ ];
-    "Control+Shift+2".action.screenshot-window = [ ];
+    "Mod+Shift+S".action.screenshot = [ ];
+    "Mod+Control+S".action.screenshot-window = [ ];
 
     "Mod+Left".action = focus-column-left;
     "Mod+Right".action = focus-column-right;
