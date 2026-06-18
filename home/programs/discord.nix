@@ -74,6 +74,7 @@
         };
         # f8Break.enable = true; # pause client when pressing F8 with devtools and breakpoints
         fakeProfileThemes.enable = true; # allows profile themeing by using invisible encoding in bio
+	fakeNitro.enable = true;
         favoriteEmojiFirst.enable = true; # moves favorite emojis first in autocomplete
         favoriteGifSearch.enable = true; # adds search bar to favorite gifs
         fixCodeblockGap.enable = true; # removes gap between codeblocks and text below it
@@ -154,7 +155,7 @@
         showAllMessageButtons.enable = true; # show all message actions if holding shift or not
         showConnections.enable = true; # show user's connected accounts in popouts
         showHiddenChannels = {
-          enable = true; # show channels that you are missing permission to view
+          enable = false; # show channels that you are missing permission to view
           # Values: 0 = Lock Icon replacing channel icon, 2 = Eye icon on the right, 1 = Lock icon on the right
           showMode = 0;
         };
