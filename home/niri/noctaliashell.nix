@@ -63,7 +63,7 @@
             }
             {
               id = "ControlCenter";
-              useDistroLogo = false;
+              useDistroLogo = true;
               icon = "noctalia"; # used when distro logo is set to false
               enableColorization = true;
             }
