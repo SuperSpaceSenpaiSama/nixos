@@ -134,15 +134,15 @@
       "fs.file-max" = 524288;
     };
 
-    # LUKS screen styling
-    # plymouth = {
-    #   enable = true;
-    #   font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
-    #   # Installs all catppuccin themes
-    #   # Options:  catppuccin-{mocha, macchiato, frappe, latte}
-    #   themePackages = [ (pkgs.catppuccin-plymouth.override { variant = "mocha"; }) ];
-    #   theme = lib.mkForce "catppuccin-mocha";
-    # };
+    LUKS screen styling
+    plymouth = {
+      enable = true;
+      font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
+      # Installs all catppuccin themes
+      # Options:  catppuccin-{mocha, macchiato, frappe, latte}
+      themePackages = [ (pkgs.catppuccin-plymouth.override { variant = "mocha"; }) ];
+      theme = lib.mkForce "catppuccin-mocha";
+    };
 
     # Enable "Silent Boot"
     consoleLogLevel = 3;
@@ -158,7 +158,7 @@
     # Hide the OS choice for bootloaders.
     # It's still possible to open the bootloader list by pressing any key
     # It will just not appear on screen unless a key is pressed
-    loader.timeout = 0;
+    # loader.timeout = 0;
 
     kernelModules = [
       "v4l2loopback"
