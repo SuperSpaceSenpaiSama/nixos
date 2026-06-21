@@ -135,14 +135,14 @@
     };
 
     # LUKS screen styling
-    plymouth = {
-      enable = true;
-      font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
-      # Installs all catppuccin themes
-      # Options:  catppuccin-{mocha, macchiato, frappe, latte}
-      themePackages = [ (pkgs.catppuccin-plymouth.override { variant = "mocha"; }) ];
-      theme = lib.mkForce "catppuccin-mocha";
-    };
+    # plymouth = {
+    #   enable = true;
+    #   font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
+    #   # Installs all catppuccin themes
+    #   # Options:  catppuccin-{mocha, macchiato, frappe, latte}
+    #   themePackages = [ (pkgs.catppuccin-plymouth.override { variant = "mocha"; }) ];
+    #   theme = lib.mkForce "catppuccin-mocha";
+    # };
 
     # Enable "Silent Boot"
     consoleLogLevel = 3;
@@ -281,6 +281,11 @@
   home-manager.backupFileExtension = "backup";
 
   system.stateVersion = "25.05";
+
+  systemd.services.mkswap-var-cache-swapfile.unitConfig = {
+    Requires = "systemd-tmpfiles-setup-dev.service";
+    After = "systemd-tmpfiles-setup-dev.service";
+  };
 
   system.activationScripts.logRebuildTime = {
     text = ''
