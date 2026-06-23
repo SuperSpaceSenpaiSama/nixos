@@ -134,7 +134,7 @@
       "fs.file-max" = 524288;
     };
 
-    LUKS screen styling
+    # LUKS screen styling
     plymouth = {
       enable = true;
       font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
