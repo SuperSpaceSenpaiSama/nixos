@@ -120,12 +120,12 @@
     #    kernelPackages = pkgs.linuxPackages_zen;
     #    kernelPackages = pkgs.linuxPackages_cachyos;
     initrd = {
-      #      luks.devices = {
-      #        root = {
-      #          device = "/dev/disk/by-uuid/dddd0efc-2082-4af1-981d-998a19c607d3";
-      #          preLVM = true;
-      #        };
-      #      };
+            luks.devices = {
+              root = {
+                device = "/dev/disk/by-uuid/fd0d1770-8034-4446-9e80-4e317281227a";
+                preLVM = true;
+              };
+            };
       systemd.enable = true;
     };
     # Needed for Star Citizen
@@ -258,13 +258,13 @@
       pulse.enable = true;
     };
 
-    sunshine = {
-      enable = true;
-      autoStart = false; # Will need to start with `sunshine`
-      capSysAdmin = true; # Needed on Wayland
-      openFirewall = true;
-    };
-  };
+  #  sunshine = {
+  #    enable = true;
+  #    autoStart = false; # Will need to start with `sunshine`
+  #    capSysAdmin = true; # Needed on Wayland
+  #    openFirewall = true;
+  #  };
+  #};
 
   hardware.bluetooth = {
     enable = true;
