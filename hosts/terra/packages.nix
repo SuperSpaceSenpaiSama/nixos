@@ -96,8 +96,8 @@ with pkgs;
   dysk # Better disk space analyzer
   solaar # control hardware devices
   evhz # measure mouse polling rates
-  cryptsetup
-  asusctl
+  # cryptsetup
+  # asusctl
 
   # Charm apps (https://charm.land/apps)
   vhs # turn commands into gifs
