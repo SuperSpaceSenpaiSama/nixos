@@ -43,9 +43,9 @@
     nixmate.url = "github:daskladas/nixmate";
 
     # nixflix = {
-      url = "github:kiriwalawren/nixflix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+      # url = "github:kiriwalawren/nixflix";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
 #    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
@@ -59,7 +59,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # bakkesmod-nix.url = "github:AddG0/bakkesmod-nix";
+
 
     xremap-flake.url = "github:xremap/nix-flake";
 
@@ -69,9 +69,9 @@
         nixpkgs.follows = "nixpkgs";
         home-manager.follows = "home-manager";
       };
-    };
+    # };
 
-    # nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-gaming.url = "github:fufexan/nix-gaming";
 
     # Star Citizen
 #    nix-citizen.url = "github:LovingMelody/nix-citizen";
@@ -98,7 +98,7 @@
           inputs.home-manager.nixosModules.default
           # inputs.agenix.nixosModules.default
           chaotic.nixosModules.default
-          # inputs.disko.nixosModules.disko
+          inputs.disko.nixosModules.disko
 
           # nix-citizen.nixosModules.default
  #         {

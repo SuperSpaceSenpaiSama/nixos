@@ -14,17 +14,17 @@ in
 with pkgs;
 [
   # Applications
-  protonplus
-  lutris
-  heroic
+  # protonplus
+  # lutris
+  # heroic
   # prismlauncher
-  nautilus
+  # nautilus
   file-roller
   termius
   obsidian
   cider-2
   jan
-  proton-pass
+  # proton-pass
 
   # Gaming Utilities
   # wineWow64Packages.stable
@@ -33,22 +33,22 @@ with pkgs;
   mono
   sc-controller
   jackify # Linux Wabbajack modding client
-  amethyst # Linux modding client
-  helium # Chromium-based browser
-  minion # ESO modding tool
+  # amethyst # Linux modding client
+  # helium # Chromium-based browser
+  # minion # ESO modding tool
 
   # Games
-  iw4x-launcher
+  # iw4x-launcher
   starsector
   # inputs.nix-gaming.packages.${stdenv.hostPlatform.system}.faf-client
-  beyond-all-reason
+  # beyond-all-reason
 
   # CLI Games
-  _2048-in-terminal
-  vitetris
-  nethack
-  chess-tui # Needs a chess engine to accompany for computer games
-  stockfish # Chess Engine
+  # _2048-in-terminal
+  # vitetris
+  # nethack
+  # chess-tui # Needs a chess engine to accompany for computer games
+  # stockfish # Chess Engine
 
   # TUI
   btop
@@ -61,20 +61,21 @@ with pkgs;
 
   # Development
   exercism # learning tool
-  rustup
+  # rustup
   #  gleam
   #  ocaml
   #  clojure
-  python3
-  gcc
+  # python3
+  # gcc
   gh
   nixfmt
   nixpkgs-fmt
-  black
-  iloader # tool to sideload .ipa  on apple devices
+  # black
+  # iloader # tool to sideload .ipa  on apple devices
 
   # Utilities
   neovim
+  pkgs.vimPlugins.LazyVim
   jq
   socat
   tree
@@ -104,11 +105,11 @@ with pkgs;
   glow # TUI markdown reader
 
   # For SteamTinkerLaunch (install with protonplus)
-  xxd
-  xdotool
-  xwininfo
-  yad
-  steamtinkerlaunch
+  # xxd
+  # xdotool
+  # xwininfo
+  # yad
+  # steamtinkerlaunch
 
   # Niri
   xwayland-satellite
