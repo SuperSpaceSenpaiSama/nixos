@@ -9,6 +9,8 @@
     home-manager.url = "github:nix-community/home-manager";
     nixvim.url = "github:nix-community/nixvim";
     agenix.url = "github:ryantm/agenix";
+    lazyvim.url = "github:pfassina/lazyvim-nix";
+
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -83,6 +85,7 @@
       self,
       nixpkgs,
       chaotic,
+      lazyvim,
 #      nix-citizen,
       ...
     }@inputs:
@@ -98,7 +101,7 @@
           inputs.home-manager.nixosModules.default
           # inputs.agenix.nixosModules.default
           chaotic.nixosModules.default
-          inputs.disko.nixosModules.disko
+          # inputs.disko.nixosModules.disko
 
           # nix-citizen.nixosModules.default
  #         {

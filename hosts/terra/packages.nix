@@ -75,7 +75,6 @@ with pkgs;
 
   # Utilities
   neovim
-  pkgs.vimPlugins.LazyVim
   jq
   socat
   tree
