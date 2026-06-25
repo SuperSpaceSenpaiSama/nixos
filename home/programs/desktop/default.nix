@@ -1,5 +1,0 @@
-{
-  imports = [
-    ./star-citizen.nix
-  ];
-}

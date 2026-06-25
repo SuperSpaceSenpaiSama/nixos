@@ -22,10 +22,10 @@ in
   imports = [
     "${self}/home/niri"
     "${self}/home/programs/browsers"
-    "${self}/home/programs/desktop"
+    #"${self}/home/programs/desktop"
     "${self}/home/programs/editors"
 
-    "${self}/home/programs/gamedev/godot.nix"
+    #"${self}/home/programs/gamedev/godot.nix"
     # "${self}/home/programs/gamedev/unity.nix"
     # "${self}/home/programs/games/bakkesmod.nix"
     # "${self}/home/programs/terminal/alacritty.nix"
