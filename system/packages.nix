@@ -62,14 +62,14 @@
     libXtst
 
     # Connect to iPhone over USB
-    usbmuxd
-    libimobiledevice
-    ideviceinstaller
+    # usbmuxd
+    # libimobiledevice
+    # ideviceinstaller
 
     # Local AI
-    koboldcpp # AI
+    # koboldcpp # AI
     # ollama-rocm # AI
-    lmstudio # AI
-    sillytavern # AI Frontend
+    # lmstudio # AI
+    # sillytavern # AI Frontend
   ];
 }
