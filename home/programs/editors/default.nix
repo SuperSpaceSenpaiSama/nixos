@@ -4,7 +4,7 @@
     ./nixvim.nix
 
     ./vscode.nix
-    ./zed.nix
+    #./zed.nix
     #./jetbrains.nix
   ];
 }
