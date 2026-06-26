@@ -180,6 +180,10 @@
       "nix-command"
       "flakes"
     ];
+
+    cores = 6;
+    max-jobs =2;
+
     auto-optimise-store = true;
 
     #substituters = [
