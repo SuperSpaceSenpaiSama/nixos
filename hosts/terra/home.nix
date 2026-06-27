@@ -52,7 +52,7 @@ in
   home.stateVersion = "26.05";
 
   home.sessionVariables = {
-    EDITOR = "hx";
+    EDITOR = "nvim";
     NH_FLAKE = "/home/${config.home.username}/nixos";
 
     # Cursor vars for xwayland
