@@ -115,7 +115,7 @@
         noBlockedMessages.enable = true; # hide blocked / ignored messages from chat
         noDevtoolsWarning.enable = true; # disables "HOLD UP" message in console
         noF1.enable = true; # disables F1 help bind
-        noMosaic.enable = true; # removes image mosaic
+        noMosaic.enable = false; # removes image mosaic
         noOnboardingDelay.enable = true; # skips the delay on omboarding page
         noPendingCount.enable = true; # removes ping count of friend requests and message requests
         noTypingAnimation.enable = true; # disables typing dots animations
